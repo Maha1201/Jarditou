@@ -1,0 +1,97 @@
+/* Modifie la version petite */
+@media screen and (max-width: 768px) 
+{
+
+    /* pas sûre de l'utilité */
+    html {
+        font-size: 100%;
+    }
+
+    /* Taille de toutes les balises h2 */
+    h2{
+        font-size : 4vw; 
+    }
+
+    #texte_global{
+        width: 100%;
+        font-size: 2vw;
+    }
+
+    /* Liste à la verticale */
+    .liste{
+        background: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Cache la colonne de droite */
+    #colonne_droite{
+        display: none;
+    }
+
+    /* Responsive table ! */
+    #tableau{
+        overflow-x:auto;
+    }
+}
+
+/* Class entete */
+.entete { 
+    display: flex;
+    width: 100%;
+}
+
+/* Logo Jarditou */
+#logo_jarditou{ 
+    width: 200px;
+    height: 60px;
+}
+
+/* La qualité depuis 70 ans c'est elle */
+#phrase_une{
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+/* Class de l'image + texte */
+.phrase_entete{
+    display: flex;
+    margin-right: auto;
+}
+
+/* CSS du menu et du bas de page */
+.liste{
+    list-style: none; /* Retire les puces */
+    background: rgb(0, 0, 0);
+    line-height: 4; /* Taille de la bande noire */
+    display: flex;
+    gap: 10px; /* Espace entre les mots */
+    justify-content: flex-start;
+} 
+
+/* Couleur des li menu et bas de page */
+.liste_couleur{
+    color:white;
+}
+
+/* Promotion !! */
+#img_promotion{
+    width: 100%;
+}
+
+/* Colonnes de gauche et de droite regroupées */
+#texte_global{
+    display: flex;
+    width: 100%;
+}
+
+#colonne_droite{
+    background: rgb(182, 182, 182);
+    width: 30%;
+}
+
+#colonne_gauche{
+    width: 100%;
+}
