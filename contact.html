@@ -50,7 +50,7 @@
 
 
                     <!--Début du formulaire -->
-                    <form action="http://bienvu.net/script.php" method="post">
+                    <form action="http://bienvu.net/script.php" method="post" id="formulaire">
 
                         <!--Premier cadre-->
                         <fieldset>
@@ -58,27 +58,34 @@
                             <legend>Vos coordonnées</legend>
                             <br>
                 
-                            <label for="nom">Votre nom* : </label><input type="text" name="nom" id="nom">
+                            <label for="nom">Votre nom* : </label><input type="text" name="nom" id="nom" required>
+                            <span id="nom_m"></span>
                             <br>
-                            <label for="prénom">Votre prénom* : </label><input type="text" name="prénom" id="prénom">
+                            <label for="prénom">Votre prénom* : </label><input type="text" name="prénom" id="prenom" required>
+                            <span id="prenom_m"></span>
                             <br><br>
                 
                             <div>Sexe* :
-                            <input type="radio" name="sexe" value="féminin"> Féminin
-                            <input type="radio" name="sexe" value="masculin"> Masculin
+                            <input type="radio" name="sexe" value="féminin" id="feminin" checked> Féminin
+                            <input type="radio" name="sexe" value="masculin" id="masculin"> Masculin
+                            <span id="sexe"></span>
+
                             </div>
                             <br>
                 
-                            <label for="date">Date de naissance* :</label><input type="date" name="ddn" id="date">
+                            <label for="date">Date de naissance* :</label><input type="date" name="ddn" id="date" required>
+                            <span id="date_m"></span>
                 
                             <br>
-                            <label for="nom">Code postal* : </label><input type="text" name="codepostal" id="codepostal">
+                            <label for="codepostal">Code postal* : </label><input type="text" name="codepostal" id="codepostal" required>
+                            <span id="cp_m"></span>
                             <br>
-                            <label for="prénom">Adresse : </label><input type="text" name="adresse" id="adresse">
+                            <label for="adresse">Adresse : </label><input type="text" name="adresse" id="adresse">
                             <br>
-                            <label for="prénom">Ville : </label><input type="text" name="ville" id="ville">
+                            <label for="ville">Ville : </label><input type="text" name="ville" id="ville">
                             <br>
-                            <label for="email">Email* : </label><input type="text" name="email" id="email" placeholder="dave.loper@afpa.fr">
+                            <label for="email">Email* : </label><input type="text" name="email" id="email" placeholder="dave.loper@afpa.fr" required>
+                            <span id="email_m"></span>
 
                         </fieldset>
 
@@ -87,21 +94,23 @@
                 
                         <!--Deuxième cadre-->
                         <fieldset>
-                                <legend>Votre demande</legend>
+                            <legend>Votre demande</legend>
                     
                             <br>
-                            <label for="sujet">Sujet* : </label>
-                            <select id="sujet">
-                                <option value="selection" selected>Veuillez séléctionner un sujet</option>
+                            <label for="sujet">Sujet* : </label><span id="sujet_m"></span>
+                            <select id="sujet" name="sujet">
+                                <option value="selection" disabled>Veuillez séléctionner un sujet</option>
                                 <option value="commande">Mes commandes</option>
                                 <option value="question">Question sur un produit</option>
                                 <option value="reclamation">Réclamation</option>
                                 <option value="autres">Autres</option>
                             </select>
                             <br>
+                            <span id="sujet_m"></span><br>
                             <div>
-                                Votre question* :<textarea name="commentaire" rows="2" cols="25"></textarea>
+                                Votre question* :<textarea name="commentaire" rows="2" cols="25" id="commentaire" required></textarea>
                             </div>
+                            <span id="commentaire_m"></span>
 
                         </fieldset>
 
@@ -109,11 +118,11 @@
                         <br>
                         
                         <!--Boutons envoyer et annuler-->
-                        <div><input type="checkbox" name="accepter" value="accepter" > * J'accepte le traitement informatique de ce formulaire</div>
-                
+                        <div><input type="checkbox" name="accepter" value="accepter" id="accepter"> * J'accepte le traitement informatique de ce formulaire</div>
+                        <span id="accepter_m"></span>
                         <br>
                 
-                        <input type="submit" value="Envoyer"> <input type="submit" value="Annuler"> 
+                        <input type="submit" value="Envoyer" id="envoyer"> <input type="reset" value="Annuler">
                     
                     </form>
                 </div>
@@ -138,6 +147,8 @@
                 </li>
             </ul>
     </footer>
+
+    <script src = "assets/js/script.js"></script>
 
 </body>
 
