@@ -1,6 +1,7 @@
 const envoi = document.getElementById("envoyer");
 envoi.addEventListener("click", valider);
 
+
 document.getElementById("formulaire").reset(); // Vide le formulaire si on refresh
 
 let nom = document.getElementById("nom");
